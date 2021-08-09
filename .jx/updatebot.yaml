@@ -1,0 +1,12 @@
+apiVersion: updatebot.jenkins-x.io/v1alpha1
+kind: UpdateConfig
+spec:
+  rules:
+  - urls:
+    - https://github.com/opajonk/test_b.git
+    changes:
+    - regex:
+        pattern: |
+          version: (.*)
+        files:
+        - "dependencies.yaml"
